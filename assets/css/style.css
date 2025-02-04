@@ -1,0 +1,229 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #0a0a0a;
+  color: #fff;
+  line-height: 1.6;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+}
+
+/* Container - Diperbarui */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem; /* Dikurangi dari 2rem menjadi 1rem */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Main Content - Diperbarui */
+.main-content {
+  min-height: 100vh;
+  padding: 1rem 0; /* Dikurangi dari 2rem menjadi 1rem */
+}
+
+/* Scripts Section - Diperbarui */
+.scripts-section {
+  background: rgba(20, 20, 20, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  margin: 1rem auto; /* Dikurangi dari 2rem menjadi 1rem */
+  padding: 1.5rem; /* Dikurangi dari 2rem menjadi 1.5rem */
+}
+
+/* Scripts Grid - Diperbarui */
+.scripts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem; /* Dikurangi dari 2rem menjadi 1.5rem */
+  margin-bottom: 2rem; /* Dikurangi dari 3rem menjadi 2rem */
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Script Card - Diperbarui */
+.script-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 1.25rem;
+  position: relative;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  height: 100%; /* Memastikan tinggi yang sama */
+  display: flex;
+  flex-direction: column;
+}
+
+.script-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Script Tags */
+.script-tag {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.premium {
+  background: linear-gradient(45deg, #ffd700, #ffa500);
+  color: #000;
+}
+
+.free {
+  background: linear-gradient(45deg, #4caf50, #45a049);
+  color: #fff;
+}
+
+/* Script Content */
+.script-card h3 {
+  font-size: 1.5rem;
+  margin: 1.5rem 0 1rem;
+  color: #fff;
+}
+
+.script-description {
+  color: #ccc;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+/* YouTube Embed - Diperbarui */
+.youtube-embed {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  margin: 1rem 0;
+  flex-grow: 1; /* Memastikan video mengambil ruang yang tersedia */
+}
+
+.youtube-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+/* Discord Button */
+.discord-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #7289da;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  width: 100%;
+  justify-content: center;
+}
+
+.discord-btn:hover {
+  background: #5c6fb1;
+  transform: scale(1.02);
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+.pagination a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.pagination a:hover,
+.pagination a.active {
+  background: #7289da;
+}
+
+/* Credits */
+.credits {
+  text-align: center;
+  margin-top: 1.5rem;
+  padding: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+}
+
+.credits .fa-heart {
+  color: #ff4444;
+  animation: heartbeat 1.5s ease infinite;
+}
+
+/* Animations */
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsive Design - Diperbarui */
+@media (max-width: 868px) {
+  .scripts-grid {
+    grid-template-columns: 1fr; /* 1 kolom untuk layar kecil */
+    max-width: 500px; /* Membatasi lebar untuk mobile */
+  }
+
+  .script-card {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
